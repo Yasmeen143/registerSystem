@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <div class="form-container">
+    <div class="form">
+    <form class="register-form">
+    <input type="text" id="input1" placeholder="user_name">
+    <input type="password" id="input2" placeholder="password">
+    <input type="email" id="input3" placeholder="email id">
+    <button type="button" onclick="create()">create</button>
+    <p class="message">Already Registered? <a href="#">Login</a>
+    </p>
+        </form>
+
+    <form class="login-form">
+    <input type="text" placeholder="user_name"/>
+    <input type="password" placeholder="password"/>
+    <button type="button" onclick="login()">login</button>
+    <p class="message">Not Registered? <a href="#">Register</a>
+    </p>
+        </form>
+</div>
+
+</div>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $('.message a').click(function(){
+    $('form').animate({height: "toggle",opacity:"toggle"},"slow")
+    });
+</script>
+</body>
+
+</html>
